@@ -1,0 +1,38 @@
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+	
+	<div class="panel panel-default" style="margin-top:8em">
+		<div class="panel-heading">
+			<h1 class="panel-title" style="font-size:32px">Iniciar Sesión</h1>
+		</div>
+		<div class="panel-body">
+			<form role="form" method="post" action="<?php echo BASE_URL; ?>login/" >
+				<fieldset>
+					<div class="form-group">
+						<input class="form-control required"  placeholder="Usuario" name="usuario" autocomplete="off"  autofocus>
+					</div>
+					<div class="form-group">
+						<input  class="form-control required" placeholder="Contraseña"  name="pass" type="password" autocomplete="off" value="">
+					</div>
+
+					<div class="form-group">
+					</div>
+					<input type="submit" class="btn btn-primary btn-block" value="Acceder" />
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<?php if(Session::get('error')): ?>
+		<div class="alert bg-danger" role="alert">
+			<em class="fa fa-lg fa-warning">&nbsp;</em><?php echo Session::get('error');Session::destroy("error"); ?><a href="#" class="pull-right" data-dismiss="alert"><em class="fa fa-lg fa-close"></em></a></div>
+    <?php endif; ?>
+    <?php if(Session::get('mensaje')): ?>
+        <div class="alert alert-success alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <?php echo Session::get('mensaje');Session::destroy("mensaje");  ?>
+        </div>
+    <?php endif; ?>
+</div>
+</div>
+
+
