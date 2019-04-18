@@ -22,11 +22,11 @@ define('HASH_KEY', '4f6a6d832be79');
 	define('DB_HOST', 'localhost');	
 	define('DB_HOST_LOCAL', false);	
 }*/
-define('BASE_URL', 'http://localhost/ontime/');
+define('BASE_URL', 'http://localhost/tiendavirtual/');
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
-define('DB_NAME', 'ontime_bd');
+define('DB_NAME', 'tiendavirtual_bd');
 define('DB_PORT', '');
 define('DB_CHAR', 'utf8');
 
