@@ -3,13 +3,13 @@
 * -------------------------------------
 * 
 * Date: 18/04/2019 17:43:39 
-* clienteModel.php
+* productoModel.php
 * -------------------------------------
 */
-class clienteModel extends Model {
+class productoModel extends Model {
     public function __construct() {
         parent::__construct(); 
-        $this->instance = $this->loadObjeto('Cliente'); 
+        $this->instance = $this->loadObjeto('Producto'); 
     }
 }
 ?>

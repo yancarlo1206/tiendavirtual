@@ -420,6 +420,10 @@
 <script src="<?php echo BASE_URL ?>public/external/countdown/jquery.plugin.min.js"></script>
 <script src="<?php echo BASE_URL ?>public/external/countdown/jquery.countdown.min.js"></script>
 <script src="<?php echo BASE_URL ?>public/external/lazyLoad/lazyload.min.js"></script>
+
+<script src="<?php echo BASE_URL ?>public/external/elevatezoom/jquery.elevatezoom.js"></script>
+<script src="<?php echo BASE_URL ?>public/external/magnific-popup/jquery.magnific-popup.min.js"></script>
+
 <script src="<?php echo BASE_URL ?>public/js/main.js"></script>
 <!-- form validation and sending to mail -->
 <script src="<?php echo BASE_URL ?>public/external/form/jquery.form.js"></script>

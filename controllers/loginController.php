@@ -3,7 +3,7 @@
 class loginController extends Controller {
     public function __construct(){
         parent::__construct();
-        $this->_usuario = $this->loadModel('usuario');
+        //$this->_usuario = $this->loadModel('usuario');
     }
     
     public function index() {
@@ -13,7 +13,8 @@ class loginController extends Controller {
         if($_POST){
             $this->_loginValidate();
         }
-        $this->redireccionar();
+        //$this->redireccionar();
+        $this->_view->renderizar('index', 'login');
     }
 
     public function iniciar() {

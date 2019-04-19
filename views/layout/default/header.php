@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="<?php echo BASE_URL ?>public/css/theme.css">
 </head>
 <body>
-<div id="loader-wrapper">
+<!-- <div id="loader-wrapper">
   <div id="loader">
     <div class="dot"></div>
     <div class="dot"></div>
@@ -21,7 +21,7 @@
     <div class="dot"></div>
     <div class="dot"></div>
   </div>
-</div>
+</div> -->
 <!-- MENU FLOTANTE DE LA DERECHA  -->
 <!-- <div id="tt-boxedbutton">
   <a href="https://www.youtube.com/playlist?list=PLjvK4DAxOmmVqXYUbOFUTqdl0b7pg7gN1" target="_blank" class="rtlbutton external-link">
@@ -105,7 +105,7 @@
   <nav class="panel-menu mobile-main-menu">
     <ul>
       <li>
-        <a href="index.html">HOME</a>
+        <a href="<?php echo BASE_URL; ?>">HOME</a>
         <!-- <ul>
           <li>
             <a href="index.html">HOME STYLES</a>
@@ -547,7 +547,7 @@
               <nav>
                 <ul>
                   <li class="dropdown tt-megamenu-col-02 selected">
-                    <a href="index.html">HOME</a>
+                    <a href="<?php echo BASE_URL; ?>">HOME</a>
                     <!-- <div class="dropdown-menu">
                       <div class="row tt-col-list">
                         <div class="col">
@@ -1333,7 +1333,7 @@
                 </div>
                 <div class="tt-dropdown-inner">
                   <ul>
-                      <li><a href="login.html"><i class="icon-f-94"></i>Iniciar Sesi&oacute;n</a></li>
+                      <li><a href="<?php echo BASE_URL ?>login/"><i class="icon-f-94"></i>Iniciar Sesi&oacute;n</a></li>
                       <li><a href="wishlist.html"><i class="icon-n-072"></i>Favoritos</a></li>
                       <li><a href="compare.html"><i class="icon-n-08"></i>Comparar Productos</a></li>
                       <!-- <li><a href="page404.html"><i class="icon-f-68"></i>Check Out</a></li> -->
