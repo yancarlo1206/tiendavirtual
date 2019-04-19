@@ -29,14 +29,16 @@
                         <div class="tt-product-single-img">
                             <div>
                                 <button class="tt-btn-zomm tt-top-right"><i class="icon-f-86"></i></button>
-                                <img class="zoom-product" src='<?php echo BASE_URL ?>public/img/producto/4.jpg' data-zoom-image="<?php echo BASE_URL ?>public/img/producto/4.jpg" alt="">
+                                <?php $rutaImg = BASE_URL."public/img/producto/".$this->producto->getId().".jpg"; ?>
+                                <img class="zoom-product" src='<?php echo $rutaImg ?>' data-zoom-image="<?php echo $rutaImg ?>" alt="">
                             </div>
                         </div>
                         <div class="tt-product-single-carousel-vertical">
                             <ul id="smallGallery" class="tt-slick-button-vertical  slick-animated-show-js">
                                 <?php $key = 1; ?>
+                                <?php $rutaImgPrincipal = BASE_URL."public/img/producto/".$this->producto->getId().".jpg"; ?>
                                 <?php $rutaImg = BASE_URL."public/img/producto/".$this->producto->getId()."_".$key.".jpg"; ?>
-                                <li><a class="zoomGalleryActive" href="#" data-image="<?php echo BASE_URL ?>public/img/producto/<?php echo $this->producto->getId() ?>.jpg" data-zoom-image="<?php echo BASE_URL ?>public/img/producto/4.jpg"><img src="<?php echo BASE_URL ?>public/img/producto/4.jpg" alt=""></a></li>
+                                <li><a class="zoomGalleryActive" href="#" data-image="<?php echo $rutaImgPrincipal ?>.jpg" data-zoom-image="<?php echo $rutaImgPrincipal ?>"><img src="<?php echo $rutaImgPrincipal ?>" alt=""></a></li>
                                 <?php while (getimagesize($rutaImg)) { ?>
                                     <li><a href="#" data-image="<?php echo $rutaImg ?>" data-zoom-image="<?php echo $rutaImg ?>"> <img src="<?php echo $rutaImg ?>" alt=""></a></li>
                                     <?php $key++; ?>
@@ -51,12 +53,12 @@
                         <div class="tt-add-info">
                             <ul>
                                 <li><span>SKU:</span> <?php echo $this->producto->getReferencia(); ?></li>
-                                <li><span>Habilitados:</span> <?php echo $this->producto->getStock() ?> en Bodega</li>
+                                <li><span>Habilitados:</span> <?php echo $this->producto->getStock(); ?> en Bodega</li>
                             </ul>
                         </div>
-                        <h1 class="tt-title">Cotton Blend Fleece Hoodie</h1>
+                        <h1 class="tt-title"><?php echo $this->producto->getNombre(); ?></h1>
                         <div class="tt-price">
-                            <span class="new-price">$29</span>
+                            <span class="new-price">$<?php echo $this->producto->getPrecio(); ?></span>
                         </div>
                         <div class="tt-review">
                             <div class="tt-rating">
@@ -72,21 +74,6 @@
                             Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                         </div>
                         <div class="tt-wrapper">
-                            <div class="tt-countdown_box_02">
-                                <div class="tt-countdown_inner">
-                                    <div class="tt-countdown"
-                                        data-date="2018-11-01"
-                                        data-year="Yrs"
-                                        data-month="Mths"
-                                        data-week="Wk"
-                                        data-day="Day"
-                                        data-hour="Hrs"
-                                        data-minute="Min"
-                                        data-second="Sec"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tt-wrapper">
                             <div class="tt-row-custom-01">
                                 <div class="col-item">
                                     <div class="tt-input-counter style-01">
@@ -96,14 +83,14 @@
                                     </div>
                                 </div>
                                 <div class="col-item">
-                                    <a href="#" class="btn btn-lg"><i class="icon-f-39"></i>ADD TO CART</a>
+                                    <a href="#" class="btn btn-lg"><i class="icon-f-39"></i>Añadir a Carrito</a>
                                 </div>
                             </div>
                         </div>
                         <div class="tt-wrapper">
                             <ul class="tt-list-btn">
-                                <li><a class="btn-link" href="#"><i class="icon-n-072"></i>ADD TO WISH LIST</a></li>
-                                <li><a class="btn-link" href="#"><i class="icon-n-08"></i>ADD TO COMPARE</a></li>
+                                <li><a class="btn-link" href="#"><i class="icon-n-072"></i>Añadir a Favoritos</a></li>
+                                <li><a class="btn-link" href="#"><i class="icon-n-08"></i>Añadir a Comparar</a></li>
                             </ul>
                         </div>
                         <div class="tt-wrapper">
