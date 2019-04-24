@@ -19,18 +19,22 @@ function __construct() {}
     /**
      * @var integer
      *
-     * @Column(name="producto", type="integer", nullable=false)
      * @Id
-     * @GeneratedValue(strategy="NONE")
+     * @ManyToOne(targetEntity="Producto")
+     * @JoinColumns({
+     *   @JoinColumn(name="producto", referencedColumnName="id")
+     * })
      */
     private $producto;
 
     /**
      * @var integer
      *
-     * @Column(name="relacionado", type="integer", nullable=false)
      * @Id
-     * @GeneratedValue(strategy="NONE")
+     * @ManyToOne(targetEntity="Producto")
+     * @JoinColumns({
+     *   @JoinColumn(name="relacionado", referencedColumnName="id")
+     * })
      */
     private $relacionado;
 
