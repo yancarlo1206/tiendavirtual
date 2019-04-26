@@ -220,100 +220,23 @@
                 <div><img src="<?php echo BASE_URL ?>public/images/loader.svg" data-src="<?php echo BASE_URL ?>public/images/product/product-01-02.jpg" alt=""></div>
                 <div><img src="<?php echo BASE_URL ?>public/images/loader.svg" data-src="<?php echo BASE_URL ?>public/images/product/product-01-03.jpg" alt=""></div>
                 <div><img src="<?php echo BASE_URL ?>public/images/loader.svg" data-src="<?php echo BASE_URL ?>public/images/product/product-01-04.jpg" alt=""></div>
-                <div>
-                  <div class="tt-video-block">
-                    <a href="#" class="link-video"></a>
-                    <video class="movie" src="video/video.mp4" poster="video/video_img.jpg"></video>
-                  </div>
-                </div>
               </div>
             </div>
             <div class="col-12 col-md-7 col-lg-6">
               <div class="tt-product-single-info">
                 <div class="tt-add-info">
                   <ul>
-                    <li><span>SKU:</span> 001</li>
-                    <li><span>Availability:</span> 40 in Stock</li>
+                    <li id="referencia"> </li>
+                    <li id="stock"> </li>
                   </ul>
                 </div>
-                <h2 class="tt-title">Cotton Blend Fleece Hoodie</h2>
+                <h2 class="tt-title" id="nombre"></h2>
                 <div class="tt-price">
-                  <span class="new-price">$29</span>
+                  <span class="new-price" id="precio"></span>
                   <span class="old-price"></span>
-                </div>
-                <div class="tt-review">
-                  <div class="tt-rating">
-                    <i class="icon-star"></i>
-                    <i class="icon-star"></i>
-                    <i class="icon-star"></i>
-                    <i class="icon-star-half"></i>
-                    <i class="icon-star-empty"></i>
-                  </div>
-                  <a href="#">(1 Customer Review)</a>
                 </div>
                 <div class="tt-wrapper">
                   Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                </div>
-                <div class="tt-swatches-container">
-                  <div class="tt-wrapper">
-                    <div class="tt-title-options">SIZE</div>
-                    <form class="form-default">
-                      <div class="form-group">
-                        <select class="form-control">
-                          <option>21</option>
-                          <option>25</option>
-                          <option>36</option>
-                        </select>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="tt-wrapper">
-                    <div class="tt-title-options">COLOR</div>
-                    <form class="form-default">
-                      <div class="form-group">
-                        <select class="form-control">
-                          <option>Red</option>
-                          <option>Green</option>
-                          <option>Brown</option>
-                        </select>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="tt-wrapper">
-                    <div class="tt-title-options">TEXTURE:</div>
-                    <ul class="tt-options-swatch options-large">
-                      <li><a class="options-color" href="#">
-                        <span class="swatch-img">
-                          <img src="<?php echo BASE_URL ?>public/images/loader.svg" data-src="<?php echo BASE_URL ?>public/images/custom/texture-img-01.jpg" alt="">
-                        </span>
-                        <span class="swatch-label color-black"></span>
-                      </a></li>
-                      <li class="active"><a class="options-color" href="#">
-                        <span class="swatch-img">
-                          <img src="<?php echo BASE_URL ?>public/images/loader.svg" data-src="<?php echo BASE_URL ?>public/images/custom/texture-img-02.jpg" alt="">
-                        </span>
-                        <span class="swatch-label color-black"></span>
-                      </a></li>
-                      <li><a class="options-color" href="#">
-                        <span class="swatch-img">
-                          <img src="<?php echo BASE_URL ?>public/images/loader.svg" data-src="<?php echo BASE_URL ?>public/images/custom/texture-img-03.jpg" alt="">
-                        </span>
-                        <span class="swatch-label color-black"></span>
-                      </a></li>
-                      <li><a class="options-color" href="#">
-                        <span class="swatch-img">
-                          <img src="<?php echo BASE_URL ?>public/images/loader.svg" data-src="<?php echo BASE_URL ?>public/images/custom/texture-img-04.jpg" alt="">
-                        </span>
-                        <span class="swatch-label color-black"></span>
-                      </a></li>
-                      <li><a class="options-color" href="#">
-                        <span class="swatch-img">
-                          <img src="<?php echo BASE_URL ?>public/images/loader.svg" data-src="<?php echo BASE_URL ?>public/images/custom/texture-img-05.jpg" alt="">
-                        </span>
-                        <span class="swatch-label color-black"></span>
-                      </a></li>
-                    </ul>
-                  </div>
                 </div>
                 <div class="tt-wrapper">
                   <div class="tt-row-custom-01">
@@ -325,7 +248,7 @@
                       </div>
                     </div>
                     <div class="col-item">
-                      <a href="#" class="btn btn-lg"><i class="icon-f-39"></i>ADD TO CART</a>
+                      <a href="#" class="btn btn-lg"><i class="icon-f-39"></i>Añadir a Carrito</a>
                     </div>
                   </div>
                 </div>
@@ -425,6 +348,7 @@
 <script src="<?php echo BASE_URL ?>public/external/magnific-popup/jquery.magnific-popup.min.js"></script>
 
 <script src="<?php echo BASE_URL ?>public/js/main.js"></script>
+<script src="<?php echo BASE_URL ?>public/js/alzati.js"></script>
 <!-- form validation and sending to mail -->
 <script src="<?php echo BASE_URL ?>public/external/form/jquery.form.js"></script>
 <script src="<?php echo BASE_URL ?>public/external/form/jquery.validate.min.js"></script>

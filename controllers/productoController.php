@@ -16,6 +16,17 @@ class productoController extends Controller {
         $this->_view->renderizar('index', 'producto');
     }
 
+    public function cargar(){
+        $this->_producto->get($this->getInt("producto"));
+        $array = array();
+        $array['id'] = $this->_producto->getInstance()->getId();
+        $array['referencia'] = $this->_producto->getInstance()->getReferencia();
+        $array['stock'] = $this->_producto->getInstance()->getStock();
+        $array['nombre'] = $this->_producto->getInstance()->getNombre();
+        $array['precio'] = $this->_producto->getInstance()->getPrecio();
+        echo json_encode($array);
+    }
+
 }
 
 ?>
