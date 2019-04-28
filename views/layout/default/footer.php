@@ -36,47 +36,49 @@
   <div class="tt-footer-col tt-color-scheme-01">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 col-lg-2 col-xl-3">
+        <div class="col-md-6 col-lg-2 col-xl-2">
           <div class="tt-mobile-collapse">
             <h4 class="tt-collapse-title">
-              CATEGORIES
+              CATEGORIAS
             </h4>
             <div class="tt-collapse-content">
               <ul class="tt-list">
-                <li><a href="listing-collection.html">Women</a></li>
-                <li><a href="listing-collection.html">Men</a></li>
-                <li><a href="listing-collection.html">Accessories</a></li>
-                <li><a href="listing-collection.html">Shoes</a></li>
-                <li><a href="listing-collection.html">New Arrivals</a></li>
-                <li><a href="listing-collection.html">Clearence</a></li>
+                <?php foreach ($this->categorias as $key => $value) { ?>
+                  <li><a href="listing-collection.html"><?php echo $value->getDescripcion(); ?></a></li>
+                <?php } ?>
               </ul>
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-2 col-xl-3">
+        <div class="col-md-6 col-lg-2 col-xl-2">
           <div class="tt-mobile-collapse">
             <h4 class="tt-collapse-title">
-              MY ACCOUNT
+              MI CUENTA
             </h4>
             <div class="tt-collapse-content">
               <ul class="tt-list">
-                <li><a href="account_order.html">Orders</a></li>
-                <li><a href="page404.html">Compare</a></li>
-                <li><a href="page404.html">Wishlist</a></li>
-                <li><a href="login.html">Log In</a></li>
-                <li><a href="create-account.html">Register</a></li>
+                <li><a href="account_order.html">Ordenes</a></li>
+                <li><a href="page404.html">Comparar</a></li>
+                <li><a href="page404.html">Favorito</a></li>
+                <li><a href="login.html">Iniciar Sesi&oacute;n</a></li>
+                <li><a href="create-account.html">Registro</a></li>
               </ul>
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4 col-xl-3">
+        <div class="col-md-6 col-lg-4 col-xl-5">
           <div class="tt-mobile-collapse">
             <h4 class="tt-collapse-title">
-              ABOUT
+              ACERCA DE
             </h4>
             <div class="tt-collapse-content">
-              <p>
-                Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, seddo eiusmod tempor incididunt ut labore etdolore.
+              <p class="text-justify">
+                Somos Alzati más que una empresa una filosofía de crecimiento personal pues nuestro nombre significa
+                levántate y resplandece, fabricantes y comercializadores de calzado, ropa y accesorios, enfocados en la
+                mujer de hoy, con un enfoque hacia el trabajo en equipo, dispuestos a brindarte las herramientas necesarias
+                para que aumentes tus ingresos, encontrando el equilibrio y la flexibilidad perfecta entre la vida personal y
+                la laboral para que de la mano crezcamos juntas, contamos con diseños originales, exclusivos y fabricados
+                con materiales de la más alta calidad.
               </p>
             </div>
           </div>
@@ -85,14 +87,14 @@
           <div class="tt-newsletter">
             <div class="tt-mobile-collapse">
               <h4 class="tt-collapse-title">
-                CONTACTS
+                CONTACTO
               </h4>
               <div class="tt-collapse-content">
                 <address>
-                  <p><span>Address:</span> 2548 Broaddus Maple Court Avenue, Madisonville KY 4783, United States of America</p>
-                  <p><span>Phone:</span> +777 2345 7885;  +777 2345 7886</p>
-                  <p><span>Hours:</span> 7 Days a week from 10 am to 6 pm</p>
-                  <p><span>E-mail:</span> <a href="mailto:info@mydomain.com">info@mydomain.com</a></p>
+                  <p><span>Direcci&oacute;n:</span> Calle 15A N 10-60 El contento</p>
+                  <p><span>Celular:</span> 3108164416</p>
+                  <p><span>WhatsApp:</span>  (+57) 3108164416</p>
+                  <p><span>E-mail:</span> info@alzati.co</p>
                 </address>
               </div>
             </div>
@@ -115,7 +117,7 @@
           <div class="tt-col-item">
             <!-- copyright -->
             <div class="tt-box-copyright">
-              &copy; Wokiee 2018. All Rights Reserved
+              &copy; Alzati 2019. Todos los Derechos Reservados
             </div>
             <!-- /copyright -->
           </div>
@@ -216,10 +218,8 @@
           <div class="row">
             <div class="col-12 col-md-5 col-lg-6">
               <div class="tt-mobile-product-slider arrow-location-center">
-                <div><img src="<?php echo BASE_URL ?>public/images/loader.svg" data-src="<?php echo BASE_URL ?>public/images/product/product-01.jpg" alt=""></div>
-                <div><img src="<?php echo BASE_URL ?>public/images/loader.svg" data-src="<?php echo BASE_URL ?>public/images/product/product-01-02.jpg" alt=""></div>
-                <div><img src="<?php echo BASE_URL ?>public/images/loader.svg" data-src="<?php echo BASE_URL ?>public/images/product/product-01-03.jpg" alt=""></div>
-                <div><img src="<?php echo BASE_URL ?>public/images/loader.svg" data-src="<?php echo BASE_URL ?>public/images/product/product-01-04.jpg" alt=""></div>
+                <div><img id="imgFrente" src="<?php echo BASE_URL ?>public/images/loader.svg" data-src="" alt=""></div>
+                <div><img id="imgDetras" src="<?php echo BASE_URL ?>public/images/loader.svg" data-src="" alt=""></div>
               </div>
             </div>
             <div class="col-12 col-md-7 col-lg-6">
