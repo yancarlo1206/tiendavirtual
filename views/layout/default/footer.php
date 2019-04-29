@@ -7,13 +7,13 @@
             <div class="tt-newsletter">
               <div class="tt-mobile-collapse">
                 <h4 class="tt-collapse-title">
-                  BE IN TOUCH WITH US:
+                  ESTAR EN CONTACTO CON NOSOTROS:
                 </h4>
                 <div class="tt-collapse-content">
                   <form id="newsletterform" class="form-inline form-default" method="post" novalidate="novalidate" action="#">
                     <div class="form-group">
-                      <input type="text" name="email" class="form-control" placeholder="Enter your e-mail">
-                      <button type="submit" class="btn">JOIN US</button>
+                      <input type="text" name="email" class="form-control" placeholder="Registrar tu correo">
+                      <button type="submit" class="btn">UNETE A NOSOTROS</button>
                     </div>
                   </form>
                 </div>
@@ -43,9 +43,9 @@
             </h4>
             <div class="tt-collapse-content">
               <ul class="tt-list">
-                <?php foreach ($this->categorias as $key => $value) { ?>
+                <!-- <?php foreach ($this->categorias as $key => $value) { ?>
                   <li><a href="listing-collection.html"><?php echo $value->getDescripcion(); ?></a></li>
-                <?php } ?>
+                <?php } ?> -->
               </ul>
             </div>
           </div>

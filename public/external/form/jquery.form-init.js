@@ -1,29 +1,36 @@
 jQuery(function($) {
-    $('#contactform').validate({
+    $('#formRegistro').validate({
         rules: {
-            name: {
+            nombre: {
                 required: true,
                 minlength: 2
+            },
+            celular: {
+                required: true,
+                minlength: 10
             },
             email: {
                 required: true,
                 email: true
             },
-            message: {
-                required: true,
+            clave: {
+                required: true
             }
         },
         messages: {
-            name: {
-                required: "Please enter your name",
-                minlength: "Your name must consist of at least 2 characters"
+            nombre: {
+                required: "Registre el nombre",
+                minlength: "El nombre no debe tener menos de 2 caracteres"
+            },
+            celular: {
+                required: "Registre el celular"
             },
             email: {
-                required: "Please enter your email"
+                required: "Registre el correo valido"
             },
-            message: {
-                required: "Please enter your message"
-            }
+            clave: {
+                required: "Registre la clave"
+            },
         },
         submitHandler: function(form) {
             $(form).ajaxSubmit({
