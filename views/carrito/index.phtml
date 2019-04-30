@@ -1,0 +1,188 @@
+<div class="tt-breadcrumb">
+	<div class="container">
+		<ul>
+			<li><a href="<?php echo BASE_URL ?>">Home</a></li>
+			<li>Carrito de Compras</li>
+		</ul>
+	</div>
+</div>
+<div id="tt-pageContent">
+	<div class="container-indent">
+		<div class="container">
+			<h1 class="tt-title-subpages noborder">CARRITO DE COMPRAS</h1>
+			<div class="tt-shopcart-table-02">
+				<table>
+					<tbody id="carritoTabla">
+
+						<script>
+						var totalprecio = 0;
+						function productoCarroTemplate(id, referencia, nombre, cantidad, precio) {
+						  return `<tr data-id="${id}">
+									<td>
+										<div class="tt-product-img">
+											<img src="<?php echo BASE_URL ?>public/images/loader.svg" data-src="<?php echo BASE_URL ?>public/img/producto/${id}.jpg" alt="">
+										</div>
+									</td>
+									<td>
+										<h2 class="tt-title">
+											<a href="#">${nombre}</a>
+										</h2>
+										<ul class="tt-list-description">
+											<li>Size: 22</li>
+											<li>Color: Green</li>
+										</ul>
+										<ul class="tt-list-parameters">
+											<li>
+												<div class="tt-price">
+													${precio}
+												</div>
+											</li>
+											<li>
+												<div class="detach-quantity-mobile"></div>
+											</li>
+											<li>
+												<div class="tt-price subtotal z">
+													${precio*cantidad}
+												</div>
+											</li>
+										</ul>
+									</td>
+									<td>
+										<div class="tt-price x">
+											${precio}
+										</div>
+									</td>
+									<td>
+										<div class="detach-quantity-desctope">
+											<div class="tt-input-counter style-01">
+												<span class="minus-btn"></span>
+												<input type="text" data-id="${id}" value="${cantidad}" size="5">
+												<span class="plus-btn"></span>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="tt-price subtotal y">
+											${precio*cantidad}
+										</div>
+									</td>
+									<td>
+										<a href="#" class="tt-btn-close y"></a>
+									</td>
+								</tr>`;
+						}
+
+						
+
+						carrito = JSON.parse(sessionStorage.getItem("carrito"));
+
+						if(carrito == null) {
+							carrito = new Array();
+						}
+
+						for (var i = 0; i < carrito.length; i++) {
+								totalprecio = totalprecio + carrito[i].cantidad * carrito[i].precio;
+								document.getElementById("carritoTabla").innerHTML = document.getElementById("carritoTabla").innerHTML +
+								productoCarroTemplate(carrito[i].producto, carrito[i].referencia, carrito[i].nombre, carrito[i].cantidad, carrito[i].precio);
+							
+						}
+
+						
+						</script>
+
+
+
+					</tbody>
+				</table>
+				<div class="tt-shopcart-btn">
+					<div class="col-left">
+						<a class="btn-link" href="<?php echo BASE_URL ?>"><i class="icon-e-19"></i>CONTINUAR COMPRANDO</a>
+					</div>
+					<div class="col-right">
+						<a class="btn-link" href="#"><i class="icon-h-02"></i>LIMPIAR CARRITO DE COMPRAS</a>
+						<a class="btn-link" href="<?php echo BASE_URL ?>carrito"><i class="icon-h-48"></i>ACTUALIZAR CARRITO</a>
+					</div>
+				</div>
+			</div>
+			<div class="tt-shopcart-col">
+				<div class="row">
+					<div class="col-md-6 col-lg-4">
+						<div class="tt-shopcart-box">
+							<h4 class="tt-title">
+								VALOR ESTIMADO DE ENVÍO
+							</h4>
+							<p>Ingrese su destino para obtener un valor estimado de envío.</p>
+							<form class="form-default">
+								<div class="form-group">
+									<label for="address_country">PAIS <sup>*</sup></label>
+									<select id="address_country" class="form-control">
+										<option>Colombia</option>
+										<option>Venezuela</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label for="address_province">CIUDAD <sup>*</sup></label>
+									<select id="address_province" class="form-control">
+										<option>Norte de Santander/Cucuta</option>
+										<option>Norte de Santander/Ocaña</option>
+									</select>
+								</div>
+								
+								<a href="#" class="btn btn-border">CALCULAR VALOR</a>
+								<p>
+									There is one shipping rate available for Alabama, Tanzania, United Republic Of.
+								</p>
+								<ul class="tt-list-dot list-dot-large">
+									<li><a href="#">International Shipping at $20.00</a></li>
+								</ul>
+							</form>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<div class="tt-shopcart-box">
+							<h4 class="tt-title">
+								NOTA
+							</h4>
+							<p>Agregar instrucciones especiales para su orden</p>
+							<form class="form-default">
+								<textarea class="form-control" id="nota" rows="7"></textarea>
+							</form>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<div class="tt-shopcart-box tt-boredr-large">
+							<table class="tt-shopcart-table01">
+								<tbody>
+									<tr>
+										<th>SUBTOTAL</th>
+										<td><div id="subtotal">
+											
+										</div>
+										<script>
+											document.getElementById("subtotal").innerHTML = totalprecio;
+										</script>
+										</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<th>TOTAL</th>
+										<td><div id="total">
+											
+										</div>
+										<script>
+											document.getElementById("total").innerHTML = totalprecio;
+										</script>
+										</td>
+									</tr>
+								</tfoot>
+							</table>
+							<a href="#" id="procederPedido" class="btn btn-lg"><span class="icon icon-check_circle"></span>PROCEDER CON EL PEDIDO</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

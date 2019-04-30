@@ -243,12 +243,12 @@
                     <div class="col-item">
                       <div class="tt-input-counter style-01">
                         <span class="minus-btn"></span>
-                        <input type="text" value="1" size="5">
+                        <input type="text" id="cantidad" value="1" size="5">
                         <span class="plus-btn"></span>
                       </div>
                     </div>
                     <div class="col-item">
-                      <a href="#" class="btn btn-lg"><i class="icon-f-39"></i>Añadir a Carrito</a>
+                      <a href="#" class="btn btn-lg" id="anadir"><i class="icon-f-39"></i>Añadir a Carrito</a>
                     </div>
                   </div>
                 </div>

@@ -1252,7 +1252,8 @@
             <div class="tt-cart tt-dropdown-obj" data-tooltip="Carro de Compras" data-tposition="bottom">
               <button class="tt-dropdown-toggle">
                 <i class="icon-f-39"></i>
-                <span class="tt-badge-cart">2</span>
+                <span class="tt-badge-cart"></span>
+                
               </button>
               <div class="tt-dropdown-menu">
                 <div class="tt-mobile-add">
@@ -1268,54 +1269,19 @@
                     </a> -->
                     <div class="tt-cart-content">
                       <div class="tt-cart-list">
-                        <div class="tt-item">
-                          <a href="product.html">
-                            <div class="tt-item-img">
-                              <img src="<?php echo BASE_URL ?>public/images/loader.svg" data-src="<?php echo BASE_URL ?>public/images/shoes/7.jpg" alt="">
-                            </div>
-                            <div class="tt-item-descriptions">
-                              <h2 class="tt-title">Descripcion de Producto</h2>
-                              <ul class="tt-add-info">
-                                <li>Amarillo, Material Cuero, Talla 28,</li>
-                                <li>Marca: Marca 1</li>
-                              </ul>
-                              <div class="tt-quantity">1 X</div> <div class="tt-price">$12.000</div>
-                            </div>
-                          </a>
-                          <div class="tt-item-close">
-                            <a href="#" class="tt-btn-close"></a>
-                          </div>
-                        </div>
-                        <div class="tt-item">
-                          <a href="product.html">
-                            <div class="tt-item-img">
-                              <img src="<?php echo BASE_URL ?>public/images/loader.svg" data-src="<?php echo BASE_URL ?>public/images/shoes/8.jpg" alt="">
-                            </div>
-                            <div class="tt-item-descriptions">
-                              <h2 class="tt-title">Descripcion de Producto</h2>
-                              <ul class="tt-add-info">
-                                <li>Rojo, Material Lana, Talla 30,</li>
-                                <li>Marca: Marca 2</li>
-                              </ul>
-                              <div class="tt-quantity">1 X</div> <div class="tt-price">$18.000</div>
-                            </div>
-                          </a>
-                          <div class="tt-item-close">
-                            <a href="#" class="tt-btn-close"></a>
-                          </div>
-                        </div>
+                        
                       </div>
                       <div class="tt-cart-total-row">
                         <div class="tt-cart-total-title">SUBTOTAL:</div>
-                        <div class="tt-cart-total-price">$324.000</div>
+                        <div class="tt-cart-total-price">$</div>
                       </div>
                       <div class="tt-cart-btn">
                         <div class="tt-item">
                           <a href="#" class="btn">CONTINUAR COMPRA</a>
                         </div>
                         <div class="tt-item">
-                          <a href="shopping_cart_02.html" class="btn-link-02 tt-hidden-mobile">Ver Carro Compras</a>
-                          <a href="shopping_cart_02.html" class="btn btn-border tt-hidden-desctope">VER CARROS COMPRAS</a>
+                          <a href="<?php echo BASE_URL ?>carrito" class="btn-link-02 tt-hidden-mobile">Ver Carro Compras</a>
+                          <a href="<?php echo BASE_URL ?>carrito" class="btn btn-border tt-hidden-desctope">VER CARROS COMPRAS</a>
                         </div>
                       </div>
                     </div>
@@ -1341,7 +1307,7 @@
                       <!-- <li><a href="page404.html"><i class="icon-f-68"></i>Check Out</a></li> -->
                       <!-- <li><a href="login.html"><i class="icon-f-76"></i>Sign In</a></li> -->
                       <!-- <li><a href="page404.html"><i class="icon-f-77"></i>Sign Out</a></li> -->
-                      <li><a href="<?php echo BASE_URL ?>registro/"><i class="icon-f-94"></i>Registro de Usuario</a></li>
+                      <li><a href="create-account.html"><i class="icon-f-94"></i>Registro de Usuario</a></li>
                   </ul>
                 </div>
               </div>
