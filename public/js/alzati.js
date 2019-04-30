@@ -16,6 +16,11 @@ jQuery(document).ready(function($) {
 			$("#stock").html("<span>Habilitados:</span> "+data.stock+" en Bodega");
 			$("#nombre").html(data.nombre);
 			$("#precio").html(data.precio);
+			$("#anadir").attr("data-producto", data.id);
+			$("#cantidad").attr("data-id", data.id);
+			$("#anadir").attr("data-nombre", data.nombre);
+			$("#anadir").attr("data-referencia", data.referencia);
+			$("#anadir").attr("data-precio", data.precio);
 			$("#ModalquickView").modal();
 		},"json");
 	});
