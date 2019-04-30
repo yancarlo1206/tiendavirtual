@@ -34,15 +34,18 @@ jQuery(function($) {
         },
         submitHandler: function(form) {
             $(form).ajaxSubmit({
-                type:"POST",
+                type: "POST",
                 data: $(form).serialize(),
-                url:"external/form/contact-form.php",
+                url: BASE.url + "registro/crear/",
                 success: function() {
-                      $('#success').fadeIn();
-            $( '#contactform' ).each(function(){this.reset();});
+                    $('#success').fadeIn();
+                    $('#formRegistro').each(function(){
+                        toastr["success"]("La Cuenta se Registró Correctamente");
+                        this.reset();
+                    });
                 },
                 error: function() {
-                    $('#contactform').fadeTo( "slow", 1, function() {
+                    $('#formRegistro').fadeTo("slow", 1, function() {
                         $('#error').fadeIn();
                     });
                 }

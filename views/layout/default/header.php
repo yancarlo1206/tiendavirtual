@@ -9,6 +9,7 @@
   <link rel="shortcut icon" href="favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="<?php echo BASE_URL ?>public/css/theme.css">
+  <link rel="stylesheet" href="<?php echo BASE_URL ?>public/js/toastr/toastr.css">
   <script>var BASE = {url:'<?php echo BASE_URL; ?>'};</script>
 </head>
 <body>

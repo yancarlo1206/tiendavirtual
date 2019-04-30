@@ -347,6 +347,8 @@
 <script src="<?php echo BASE_URL ?>public/external/elevatezoom/jquery.elevatezoom.js"></script>
 <script src="<?php echo BASE_URL ?>public/external/magnific-popup/jquery.magnific-popup.min.js"></script>
 
+<script src="<?php echo BASE_URL; ?>public/js/toastr/toastr.min.js" type="text/javascript"></script>
+
 <script src="<?php echo BASE_URL ?>public/js/main.js"></script>
 <script src="<?php echo BASE_URL ?>public/js/alzati.js"></script>
 <!-- form validation and sending to mail -->
