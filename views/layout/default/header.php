@@ -1169,76 +1169,8 @@
                       Que estas buscando ?
                     </div>
                     <div class="search-results">
-                      <ul>
-                        <li>
-                                <a href="product.html">
-                                  <div class="thumbnail"><img src="<?php echo BASE_URL ?>public/images/loader.svg" data-src="<?php echo BASE_URL ?>public/images/shoes/1.jpg" alt=""></div>
-                                  <div class="tt-description">
-                                    <div class="tt-title">Detalle Producto</div>
-                                    <div class="tt-price">
-                                <span class="new-price">$14.000</span>
-                                <span class="old-price">$24.000</span>
-                              </div>
-                                  </div>
-                                </a>
-                            </li>
-                            <li>
-                               <a href="product.html">
-                                  <div class="thumbnail"><img src="<?php echo BASE_URL ?>public/images/loader.svg" data-src="<?php echo BASE_URL ?>public/images/shoes/2.jpg" alt=""></div>
-                                  <div class="tt-description">
-                                    <div class="tt-title">Detalle Producto</div>
-                                    <div class="tt-price">
-                                $24.000
-                              </div>
-                                  </div>
-                                </a>
-                            </li>
-                            <li>
-                               <a href="product.html">
-                                  <div class="thumbnail"><img src="<?php echo BASE_URL ?>public/images/loader.svg" data-src="<?php echo BASE_URL ?>public/images/shoes/3.jpg" alt=""></div>
-                                  <div class="tt-description">
-                                    <div class="tt-title">Detalle Producto</div>
-                                    <div class="tt-price">
-                                $14.000
-                              </div>
-                                  </div>
-                                </a>
-                            </li>
-                            <li>
-                               <a href="product.html">
-                                  <div class="thumbnail"><img src="<?php echo BASE_URL ?>public/images/loader.svg" data-src="<?php echo BASE_URL ?>public/images/shoes/4.jpg" alt=""></div>
-                                  <div class="tt-description">
-                                    <div class="tt-title">Detalle Producto</div>
-                                    <div class="tt-price">
-                                $24.000
-                              </div>
-                                  </div>
-                                </a>
-                            </li>
-                            <li>
-                               <a href="product.html">
-                                  <div class="thumbnail"><img src="<?php echo BASE_URL ?>public/images/loader.svg" data-src="<?php echo BASE_URL ?>public/images/shoes/5.jpg" alt=""></div>
-                                  <div class="tt-description">
-                                    <div class="tt-title">Detalle Producto</div>
-                                    <div class="tt-price">
-                                $17.000
-                              </div>
-                                  </div>
-                                </a>
-                            </li>
-                            <li>
-                               <a href="product.html">
-                                  <div class="thumbnail"><img src="<?php echo BASE_URL ?>public/images/loader.svg" data-src="<?php echo BASE_URL ?>public/images/shoes/6.jpg" alt=""></div>
-                                  <div class="tt-description">
-                                    <div class="tt-title">Detalle Producto</div>
-                                    <div class="tt-price">
-                                $20.000
-                              </div>
-                                  </div>
-                                </a>
-                            </li>
-                      </ul>
-                      <button type="button" class="tt-view-all">Ver todos los productos</button>
+                      
+                      
                     </div>
                   </form>
                 </div>

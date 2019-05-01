@@ -3279,7 +3279,48 @@ jQuery(function($){
   if($ttsearch2Input.length && $ttSearch2Results.length){
       $ttsearch2Input.on("input",function(ev){
           if($(ev.target).val()){
+
+              var param = $ttsearch2Input.val();
+              if(param.length<3){
+                $ttSearch2Results.html("");
+              }
+              if(param.length>=3){
+              $.ajax({
+            type: "POST",
+            url: BASE.url + 'producto/buscarsearch',
+            data: {param: param},//capturo array     
+            success: function(data){
+              console.log(data);
+              data = JSON.parse(data);
+              var titems = "<ul>";
+              for (var i = 0; i < data.length && i<=5; i++) {
+                var json = data[i];
+               
+              titems = titems + `<li>
+                <a href="${BASE.url}producto/detalle/${json.id}">
+                    <div class="thumbnail"><img src="${BASE.url}public/img/producto/${json.id}.jpg" data-src="${BASE.url}public/img/producto/${json.id}.jpg" alt=""></div>
+                    <div class="tt-description">
+                      <div class="tt-title">${json.nombre}</div>
+                      <div class="tt-price">
+                  <span class="price">$${json.precio}</span>
+                  <!--<span class="old-price">$24.000</span>-->
+                </div>
+                    </div>
+                  </a>
+              </li>`;
+            }
+            titems = titems + "</ul> ";
+            titems = titems + `<button type="button" class="tt-view-all">Ver todos los productos</button>`;
+             //console.log(titems);
+            $ttSearch2Results.html(titems);
+          }
+          
+          });
+
               $ttSearch2Results.fadeIn("200");
+            }else{
+              $ttSearch2Results.fadeOut("200");
+            }
           };
       });
       $ttsearch2Input.blur(function(){

@@ -10,7 +10,7 @@ define('ENTITIES_PATH_AUTO', MODELS_PATH . 'EntitiesAuto' . DS);
 define('LIBS_PATH', ROOT . 'libs' . DS);
 define('CONTROLLER_PATH', ROOT . 'controllers' . DS);
 define('TEMP_PATH', ROOT . 'tmp' . DS);
-define('USER_AGENT', $_SERVER['HTTP_USER_AGENT']);
+//define('USER_AGENT', $_SERVER['HTTP_USER_AGENT']);
 date_default_timezone_set('America/Bogota');
 
 try{
