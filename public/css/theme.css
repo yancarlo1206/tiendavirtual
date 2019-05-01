@@ -29498,3 +29498,8 @@ html:not(.mac):not(.touch-device) .tt-carousel-brands .slick-track {
 
 .tt-color-bg-18 {
   background-color: #777878; }
+
+.tt-cart-content {
+  overflow-y: auto; 
+  max-height:400px;
+}

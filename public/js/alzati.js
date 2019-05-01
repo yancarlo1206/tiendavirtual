@@ -61,6 +61,7 @@ jQuery(document).ready(function($) {
 		var cantidad = $("#cantidad").val();
 
 		editarCarrito(producto, nombre, referencia, precio, cantidad, 0);
+		toastr["success"]("El producto " + nombre + " se ha agregado al pedido");
 		$(".tt-cart-list").html(productoCarrosPrincipal());
 		$(".tt-badge-cart").text(cantidadCarrito());
     	$(".tt-cart-total-price").text(totalCarrito());
@@ -189,7 +190,7 @@ function productoCarroTemplateVentana(id, referencia, nombre, cantidad, precio, 
   return `<div class="tt-item" data-id="${id}">
 	  <a href="${url}producto/detalle/${id}">
 	    <div class="tt-item-img">
-	      <img src="${url}public/images/loader.svg" data-src="${url}public/img/producto/${id}.jpg" alt="">
+	      <img src="${url}public/img/producto/${id}.jpg" data-src="${url}public/img/producto/${id}.jpg" alt="">
 	    </div>
 	    <div class="tt-item-descriptions">
 	      <h2 class="tt-title">${nombre}</h2>
