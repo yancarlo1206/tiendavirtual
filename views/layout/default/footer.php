@@ -36,7 +36,7 @@
   <div class="tt-footer-col tt-color-scheme-01">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 col-lg-2 col-xl-2">
+        <!-- <div class="col-md-6 col-lg-2 col-xl-2">
           <div class="tt-mobile-collapse">
             <h4 class="tt-collapse-title">
               CATEGORIAS
@@ -47,8 +47,8 @@
               </ul>
             </div>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-2 col-xl-2">
+        </div> -->
+        <!-- <div class="col-md-6 col-lg-2 col-xl-2">
           <div class="tt-mobile-collapse">
             <h4 class="tt-collapse-title">
               MI CUENTA
@@ -63,8 +63,8 @@
               </ul>
             </div>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-4 col-xl-5">
+        </div> -->
+        <div class="col-md-6 col-lg-4 col-xl-8">
           <div class="tt-mobile-collapse">
             <h4 class="tt-collapse-title">
               ACERCA DE
@@ -81,7 +81,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4 col-xl-3">
+        <div class="col-md-6 col-lg-4 col-xl-4">
           <div class="tt-newsletter">
             <div class="tt-mobile-collapse">
               <h4 class="tt-collapse-title">
