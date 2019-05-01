@@ -43,9 +43,7 @@
             </h4>
             <div class="tt-collapse-content">
               <ul class="tt-list">
-                <!-- <?php foreach ($this->categorias as $key => $value) { ?>
-                  <li><a href="listing-collection.html"><?php echo $value->getDescripcion(); ?></a></li>
-                <?php } ?> -->
+                
               </ul>
             </div>
           </div>
