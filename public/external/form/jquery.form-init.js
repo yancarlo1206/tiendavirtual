@@ -36,11 +36,16 @@ jQuery(function($) {
             $(form).ajaxSubmit({
                 type: "POST",
                 data: $(form).serialize(),
+                dataType: "json",
                 url: BASE.url + "registro/crear/",
-                success: function() {
+                success: function(data) {
                     $('#success').fadeIn();
                     $('#formRegistro').each(function(){
-                        toastr["success"]("La Cuenta se Registró Correctamente");
+                        if(data.error){
+                            toastr["error"](data.error);
+                        }else{
+                            toastr["success"](data.ok);
+                        }
                         this.reset();
                     });
                 },
