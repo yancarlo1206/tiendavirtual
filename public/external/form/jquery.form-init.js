@@ -57,6 +57,51 @@ jQuery(function($) {
             });
         }
     });
+
+    $('#formLogin').validate({
+        rules: {
+            email: {
+                required: true,
+                email: true
+            },
+            clave: {
+                required: true
+            }
+        },
+        messages: {
+            email: {
+                required: "Registre el correo valido"
+            },
+            clave: {
+                required: "Registre la clave"
+            },
+        },
+        submitHandler: function(form) {
+            $(form).ajaxSubmit({
+                type: "POST",
+                data: $(form).serialize(),
+                dataType: "json",
+                url: BASE.url + "login/login/",
+                success: function(data) {
+                    $('#success').fadeIn();
+                    $('#formLogin').each(function(){
+                        if(data.error){
+                            toastr["error"](data.error);
+                        }else{
+                            toastr["success"](data.ok);
+                        }
+                        this.reset();
+                    });
+                },
+                error: function() {
+                    toastr["error"]("Error en el Proceso");
+                }
+            });
+        }
+    });
+
+
+
     $('#newsletterform').validate({
         rules: {
             email: {

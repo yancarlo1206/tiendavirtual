@@ -1307,7 +1307,7 @@
                       <!-- <li><a href="page404.html"><i class="icon-f-68"></i>Check Out</a></li> -->
                       <!-- <li><a href="login.html"><i class="icon-f-76"></i>Sign In</a></li> -->
                       <!-- <li><a href="page404.html"><i class="icon-f-77"></i>Sign Out</a></li> -->
-                      <li><a href="create-account.html"><i class="icon-f-94"></i>Registro de Usuario</a></li>
+                      <li><a href="<?php echo BASE_URL ?>registro/"><i class="icon-f-94"></i>Registro de Usuario</a></li>
                   </ul>
                 </div>
               </div>

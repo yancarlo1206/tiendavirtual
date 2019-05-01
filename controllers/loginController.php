@@ -13,7 +13,6 @@ class loginController extends Controller {
         if($_POST){
             $this->_loginValidate();
         }
-        //$this->redireccionar();
         $this->_view->renderizar('index', 'login');
     }
 
