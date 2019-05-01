@@ -39,7 +39,7 @@ jQuery(function($) {
                 dataType: "json",
                 url: BASE.url + "registro/crear/",
                 success: function(data) {
-                    $('#success').fadeIn();
+                    //$('#success').fadeIn();
                     $('#formRegistro').each(function(){
                         if(data.error){
                             toastr["error"](data.error);
@@ -51,7 +51,7 @@ jQuery(function($) {
                 },
                 error: function() {
                     $('#formRegistro').fadeTo("slow", 1, function() {
-                        $('#error').fadeIn();
+                        //$('#error').fadeIn();
                     });
                 }
             });
@@ -81,9 +81,8 @@ jQuery(function($) {
                 type: "POST",
                 data: $(form).serialize(),
                 dataType: "json",
-                url: BASE.url + "login/login/",
+                url: BASE.url + "login/iniciar/",
                 success: function(data) {
-                    $('#success').fadeIn();
                     $('#formLogin').each(function(){
                         if(data.error){
                             toastr["error"](data.error);
@@ -91,6 +90,7 @@ jQuery(function($) {
                             toastr["success"](data.ok);
                         }
                         this.reset();
+                        location.reload();
                     });
                 },
                 error: function() {

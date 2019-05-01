@@ -1233,13 +1233,17 @@
                 </div>
                 <div class="tt-dropdown-inner">
                   <ul>
-                      <li><a href="<?php echo BASE_URL ?>login/"><i class="icon-f-94"></i>Iniciar Sesi&oacute;n</a></li>
-                      <li><a href="wishlist.html"><i class="icon-n-072"></i>Favoritos</a></li>
-                      <li><a href="compare.html"><i class="icon-n-08"></i>Comparar Productos</a></li>
+                      <?php if(!Session::get('autenticado')){ ?>
+                        <li><a href="<?php echo BASE_URL ?>login/"><i class="icon-f-94"></i>Iniciar Sesi&oacute;n</a></li>
+                        <li><a href="<?php echo BASE_URL ?>registro/"><i class="icon-f-94"></i>Registro de Usuario</a></li>
+                      <?php }else{ ?>
+                        <li><a href="<?php echo BASE_URL ?>login/cerrar/"><i class="icon-f-94"></i>Cerrar Sesi&oacute;n</a></li>
+                      <?php } ?>
+                      <!-- <li><a href="wishlist.html"><i class="icon-n-072"></i>Favoritos</a></li> -->
+                      <!-- <li><a href="compare.html"><i class="icon-n-08"></i>Comparar Productos</a></li> -->
                       <!-- <li><a href="page404.html"><i class="icon-f-68"></i>Check Out</a></li> -->
                       <!-- <li><a href="login.html"><i class="icon-f-76"></i>Sign In</a></li> -->
                       <!-- <li><a href="page404.html"><i class="icon-f-77"></i>Sign Out</a></li> -->
-                      <li><a href="<?php echo BASE_URL ?>registro/"><i class="icon-f-94"></i>Registro de Usuario</a></li>
                   </ul>
                 </div>
               </div>

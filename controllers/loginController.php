@@ -3,25 +3,37 @@
 class loginController extends Controller {
     public function __construct(){
         parent::__construct();
-        //$this->_usuario = $this->loadModel('usuario');
+        $this->_usuario = $this->loadModel('usuario');
     }
     
     public function index() {
         if(Session::get('autenticado')){
             $this->redireccionar();
         }
-        if($_POST){
-            $this->_loginValidate();
-        }
         $this->_view->renderizar('index', 'login');
     }
 
-    public function iniciar() {
-        $this->_view->titulo = 'Iniciar Sesión';
-        if(Session::get('autenticado')){
-            $this->redireccionar();
+    public function iniciar(){
+        if(!$this->getTexto('email') || !$this->getSql('clave')){
+            $array['error'] = "Error en el Proceso" ;
+            echo json_encode($array);
+            exit;  
         }
-        $this->_view->renderizar('index', ucwords($this->_view->titulo));
+        $usuario = $this->_usuario->findByObject(array('clave' => Hash::getHash('sha1', $this->getSql('clave'), HASH_KEY), 'email'  => $this->getTexto('email')));
+        if(!$usuario){
+            $array['error'] = "Correo y/o Contraseña Incorrectos" ;
+            echo json_encode($array);
+            exit;
+        }
+        Session::set('autenticado', true);
+        Session::set('level', 'usuario');
+        Session::set('usuario', $usuario->getNombre());
+        Session::set('codigo', $usuario->getId());
+        Session::set('tiempo', time());
+        //Session::set('mensaje','Bienvenido <b>'.$usuario->getNombre().'</b>');
+        $array['ok'] = "Inicio de Sesión Correcto" ;
+        echo json_encode($array);
+        exit;
     }
 
     public function cambiar() {
@@ -64,40 +76,7 @@ class loginController extends Controller {
         $this->redireccionar();
     }
 
-    private function _loginValidate(){
-        if($_POST){
-            if(!$this->getTexto('usuario')){
-                Session::set('error','Debe Introducir un Usuario');
-                $this->redireccionar();
-                exit;
-            }
-            if(!$this->getSql('pass')){
-                Session::set('error','Debe Introducir una Clave');
-                $this->redireccionar();
-                exit;
-            }
-            $usuario = $this->_usuario->findByObject(array('clave' => Hash::getHash('sha1', $this->getSql('pass'), HASH_KEY),'usuario'  => $this->getTexto('usuario')));
-            if(!$usuario){
-                Session::set('error','Codigo y/o Contraseña Incorrectos');
-                $this->redireccionar();
-                exit;
-            }
-            Session::set('autenticado', true);
-            if($usuario->getTipoUsuario()->getId() == 100){
-                Session::set('level', 'administrador');
-            }
-            if($usuario->getTipoUsuario()->getId() == 1){
-                Session::set('level', 'usuario');
-            }
-            if($usuario->getTipoUsuario()->getId() == 2){
-                Session::set('level', 'consultorio');
-            }
-            Session::set('usuario', $usuario->getUsuario());
-            Session::set('codigo', $usuario->getId());
-            Session::set('tiempo', time());
-            Session::set('mensaje','Bienvenido <b>'.$usuario->getNombre().'</b>');
-        }
-    }
+    
     
 }
 
