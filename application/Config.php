@@ -7,7 +7,7 @@ define('APP_EMAIL', 'contacto@tksis.co');
 define('APP_SLOGAN', 'TKSIS');
 define('APP_COMPANY', 'www.tksis.co');
 define('SESSION_TIME', 100);
-define('HASH_KEY', '4f6a6d832be79');
+define('HASH_KEY', '4lz4t1832be79');
 
 if (in_array(@$_SERVER['REMOTE_ADDR'], array(
     '127.0.0.1',
