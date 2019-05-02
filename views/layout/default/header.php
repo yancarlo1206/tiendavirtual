@@ -6,7 +6,7 @@
   <meta name="keywords" content="Tienda Online Alzati Shoes">
   <meta name="description" content="Tienda Online Alzati Shoes">
   <meta name="author" content="Alzati Shoes">
-  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="shortcut icon" href="<?php echo BASE_URL ?>public/img/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="<?php echo BASE_URL ?>public/css/theme.css">
   <link rel="stylesheet" href="<?php echo BASE_URL ?>public/js/toastr/toastr.css">
@@ -25,19 +25,19 @@
   </div>
 </div> -->
 <!-- MENU FLOTANTE DE LA DERECHA  -->
-<!-- <div id="tt-boxedbutton">
-  <a href="https://www.youtube.com/playlist?list=PLjvK4DAxOmmVqXYUbOFUTqdl0b7pg7gN1" target="_blank" class="rtlbutton external-link">
+<div id="tt-boxedbutton">
+  <a href="https://api.whatsapp.com/send?phone=573108164416" target="_blank" class="rtlbutton external-link">
     <div class="box-btn">
-      <i class="icon-g-54"></i>
+      <i class="icon-f-88"></i>
     </div>
     <div class="box-description">
-      Presentation&nbsp;<strong>VIDEO</strong>
+      Mensaje <strong>Whatsapp</strong>
     </div>
     <div class="box-disable">
       Disable
     </div>
   </a>
-  <div class="rtlbutton boxbutton-js">
+  <!-- <div class="rtlbutton boxbutton-js">
     <div class="box-btn">
       BOX
     </div>
@@ -47,8 +47,8 @@
     <div class="box-disable">
       Disable
     </div>
-  </div>
-  <div class="rtlbutton rtlbutton-js">
+  </div> -->
+  <!-- <div class="rtlbutton rtlbutton-js">
     <div class="box-btn">
       RTL
     </div>
@@ -58,8 +58,8 @@
     <div class="box-disable">
       Disable
     </div>
-  </div>
-  <div class="rtlbutton-color">
+  </div> -->
+  <!-- <div class="rtlbutton-color">
     <div class="box-btn"><img src="<?php echo BASE_URL ?>public/images/custom/rtlbutton-color.png" alt=""></div>
     <div class="box-description">
       <span class="box-title">COLOR SCHEME</span>
@@ -74,8 +74,8 @@
         <li data-color="08"><a href="#" class="colorswatch8"></a></li>
       </ul>
     </div>
-  </div>
-</div> -->
+  </div> -->
+</div> 
 <!-- MENU FLOTANTE DE LA DERECHA  -->
 
 <!-- MENU FLOTANTE DE LA IZQUIERDA  -->
@@ -1200,6 +1200,7 @@
                       <p>No Products in the Cart</p>
                     </a> -->
                     <div class="tt-cart-content">
+                      <?php if(Session::get('autenticado')){ ?>
                       <div class="tt-cart-list">
                         
                       </div>
@@ -1216,6 +1217,13 @@
                           <a href="<?php echo BASE_URL ?>carrito" class="btn btn-border tt-hidden-desctope">VER CARROS COMPRAS</a>
                         </div>
                       </div>
+                      <?php }else{ ?>
+                        <div class="tt-cart-btn">
+                        <div class="tt-item">
+                          <a href="<?php echo BASE_URL ?>login/" class="btn">INICIAR SESION</a>
+                        </div>
+                      </div>
+                      <?php } ?>
                     </div>
                   </div>
                 </div>
@@ -1233,13 +1241,17 @@
                 </div>
                 <div class="tt-dropdown-inner">
                   <ul>
-                      <li><a href="<?php echo BASE_URL ?>login/"><i class="icon-f-94"></i>Iniciar Sesi&oacute;n</a></li>
-                      <li><a href="wishlist.html"><i class="icon-n-072"></i>Favoritos</a></li>
-                      <li><a href="compare.html"><i class="icon-n-08"></i>Comparar Productos</a></li>
+                      <?php if(!Session::get('autenticado')){ ?>
+                        <li><a href="<?php echo BASE_URL ?>login/"><i class="icon-f-94"></i>Iniciar Sesi&oacute;n</a></li>
+                        <li><a href="<?php echo BASE_URL ?>registro/"><i class="icon-f-94"></i>Registro de Usuario</a></li>
+                      <?php }else{ ?>
+                        <li><a href="<?php echo BASE_URL ?>login/cerrar/"><i class="icon-f-94"></i>Cerrar Sesi&oacute;n</a></li>
+                      <?php } ?>
+                      <!-- <li><a href="wishlist.html"><i class="icon-n-072"></i>Favoritos</a></li> -->
+                      <!-- <li><a href="compare.html"><i class="icon-n-08"></i>Comparar Productos</a></li> -->
                       <!-- <li><a href="page404.html"><i class="icon-f-68"></i>Check Out</a></li> -->
                       <!-- <li><a href="login.html"><i class="icon-f-76"></i>Sign In</a></li> -->
                       <!-- <li><a href="page404.html"><i class="icon-f-77"></i>Sign Out</a></li> -->
-                      <li><a href="create-account.html"><i class="icon-f-94"></i>Registro de Usuario</a></li>
                   </ul>
                 </div>
               </div>

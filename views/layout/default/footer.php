@@ -23,11 +23,12 @@
         </div>
         <div class="col-md-auto">
           <ul class="tt-social-icon">
-            <li><a class="icon-g-64" target="_blank" href="http://www.facebook.com/"></a></li>
+            <li><a>Instagram</a></li>
+            <!-- <li><a class="icon-g-64" target="_blank" href="http://www.facebook.com/"></a></li>
             <li><a class="icon-h-58" target="_blank" href="http://www.facebook.com/"></a></li>
-            <li><a class="icon-g-66" target="_blank" href="http://www.twitter.com/"></a></li>
-            <li><a class="icon-g-67" target="_blank" href="http://www.google.com/"></a></li>
-            <li><a class="icon-g-70" target="_blank" href="https://instagram.com/"></a></li>
+            <li><a class="icon-g-66" target="_blank" href="http://www.twitter.com/"></a></li 
+            <li><a class="icon-g-70" target="_blank" href="https://instagram.com/"></a></li> -->
+            <li><a class="icon-g-67" target="_blank" href="https://www.instagram.com/alzatishoes/"></a></li> 
           </ul>
         </div>
       </div>
@@ -36,7 +37,7 @@
   <div class="tt-footer-col tt-color-scheme-01">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 col-lg-2 col-xl-2">
+        <!-- <div class="col-md-6 col-lg-2 col-xl-2">
           <div class="tt-mobile-collapse">
             <h4 class="tt-collapse-title">
               CATEGORIAS
@@ -47,8 +48,8 @@
               </ul>
             </div>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-2 col-xl-2">
+        </div> -->
+        <!-- <div class="col-md-6 col-lg-2 col-xl-2">
           <div class="tt-mobile-collapse">
             <h4 class="tt-collapse-title">
               MI CUENTA
@@ -63,8 +64,8 @@
               </ul>
             </div>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-4 col-xl-5">
+        </div> -->
+        <div class="col-md-6 col-lg-4 col-xl-8">
           <div class="tt-mobile-collapse">
             <h4 class="tt-collapse-title">
               ACERCA DE
@@ -81,7 +82,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4 col-xl-3">
+        <div class="col-md-6 col-lg-4 col-xl-4">
           <div class="tt-newsletter">
             <div class="tt-mobile-collapse">
               <h4 class="tt-collapse-title">

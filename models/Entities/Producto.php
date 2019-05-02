@@ -102,6 +102,20 @@ function __construct() {}
      */
     private $descuento = '0';
 
+    /**
+     * @var integer
+     *
+     * @Column(name="tendencia", type="integer", nullable=true)
+     */
+    private $tendencia;
+
+    /**
+     * @var integer
+     *
+     * @Column(name="masvendido", type="integer", nullable=true)
+     */
+    private $masVendido;
+
 
     /** 
      * Set id
@@ -378,4 +392,51 @@ function __construct() {}
     {
         return $this->descuento;
     }
+
+    /** 
+     * Set tendencia
+     *
+     * @param integer $tendencia
+     * @return Producto
+     */
+    public function setTendencia($tendencia)
+    {
+        $this->tendencia = $tendencia;
+    
+        return $this;
+    }
+
+    /**
+     * Get tendencia
+     *
+     * @return integer 
+     */
+    public function getTendencia()
+    {
+        return $this->tendencia;
+    }
+
+    /** 
+     * Set masVendido
+     *
+     * @param integer $masVendido
+     * @return Producto
+     */
+    public function setMasVendido($masVendido)
+    {
+        $this->masVendido = $masVendido;
+    
+        return $this;
+    }
+
+    /**
+     * Get masVendido
+     *
+     * @return integer 
+     */
+    public function getMasVendido()
+    {
+        return $this->masVendido;
+    }
+
 }

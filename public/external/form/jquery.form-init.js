@@ -39,7 +39,7 @@ jQuery(function($) {
                 dataType: "json",
                 url: BASE.url + "registro/crear/",
                 success: function(data) {
-                    $('#success').fadeIn();
+                    //$('#success').fadeIn();
                     $('#formRegistro').each(function(){
                         if(data.error){
                             toastr["error"](data.error);
@@ -51,12 +51,57 @@ jQuery(function($) {
                 },
                 error: function() {
                     $('#formRegistro').fadeTo("slow", 1, function() {
-                        $('#error').fadeIn();
+                        //$('#error').fadeIn();
                     });
                 }
             });
         }
     });
+
+    $('#formLogin').validate({
+        rules: {
+            email: {
+                required: true,
+                email: true
+            },
+            clave: {
+                required: true
+            }
+        },
+        messages: {
+            email: {
+                required: "Registre el correo valido"
+            },
+            clave: {
+                required: "Registre la clave"
+            },
+        },
+        submitHandler: function(form) {
+            $(form).ajaxSubmit({
+                type: "POST",
+                data: $(form).serialize(),
+                dataType: "json",
+                url: BASE.url + "login/iniciar/",
+                success: function(data) {
+                    $('#formLogin').each(function(){
+                        if(data.error){
+                            toastr["error"](data.error);
+                        }else{
+                            toastr["success"](data.ok);
+                        }
+                        this.reset();
+                        location.reload();
+                    });
+                },
+                error: function() {
+                    toastr["error"]("Error en el Proceso");
+                }
+            });
+        }
+    });
+
+
+
     $('#newsletterform').validate({
         rules: {
             email: {
