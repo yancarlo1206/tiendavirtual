@@ -12,8 +12,8 @@ class indexController extends Controller {
     	//if(Session::get('autenticado')){
             //$this->_view->renderizar('index', 'inicio');
         //}else{
-        $this->_view->productosTendencias = $this->_producto->dql("SELECT p FROM Entities\Producto p WHERE p.id < 9");
-        $this->_view->productosVendidos = $this->_producto->dql("SELECT p FROM Entities\Producto p WHERE p.id > 8 AND  p.id < 17");
+        $this->_view->productosTendencias = $this->_producto->findBy(array('tendencia' => 1));
+        $this->_view->productosVendidos = $this->_producto->findBy(array('masVendido' => 1));
         $this->_view->categorias = $this->_categoria->resultList();
         $this->_view->renderizar('index', 'inicio');
         //}
