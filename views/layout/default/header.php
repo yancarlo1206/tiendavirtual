@@ -25,19 +25,19 @@
   </div>
 </div> -->
 <!-- MENU FLOTANTE DE LA DERECHA  -->
-<!-- <div id="tt-boxedbutton">
-  <a href="https://www.youtube.com/playlist?list=PLjvK4DAxOmmVqXYUbOFUTqdl0b7pg7gN1" target="_blank" class="rtlbutton external-link">
+<div id="tt-boxedbutton">
+  <a href="https://api.whatsapp.com/send?phone=573108164416" target="_blank" class="rtlbutton external-link">
     <div class="box-btn">
-      <i class="icon-g-54"></i>
+      <i class="icon-f-88"></i>
     </div>
     <div class="box-description">
-      Presentation&nbsp;<strong>VIDEO</strong>
+      Mensaje <strong>Whatsapp</strong>
     </div>
     <div class="box-disable">
       Disable
     </div>
   </a>
-  <div class="rtlbutton boxbutton-js">
+  <!-- <div class="rtlbutton boxbutton-js">
     <div class="box-btn">
       BOX
     </div>
@@ -47,8 +47,8 @@
     <div class="box-disable">
       Disable
     </div>
-  </div>
-  <div class="rtlbutton rtlbutton-js">
+  </div> -->
+  <!-- <div class="rtlbutton rtlbutton-js">
     <div class="box-btn">
       RTL
     </div>
@@ -58,8 +58,8 @@
     <div class="box-disable">
       Disable
     </div>
-  </div>
-  <div class="rtlbutton-color">
+  </div> -->
+  <!-- <div class="rtlbutton-color">
     <div class="box-btn"><img src="<?php echo BASE_URL ?>public/images/custom/rtlbutton-color.png" alt=""></div>
     <div class="box-description">
       <span class="box-title">COLOR SCHEME</span>
@@ -74,8 +74,8 @@
         <li data-color="08"><a href="#" class="colorswatch8"></a></li>
       </ul>
     </div>
-  </div>
-</div> -->
+  </div> -->
+</div> 
 <!-- MENU FLOTANTE DE LA DERECHA  -->
 
 <!-- MENU FLOTANTE DE LA IZQUIERDA  -->
@@ -1200,6 +1200,7 @@
                       <p>No Products in the Cart</p>
                     </a> -->
                     <div class="tt-cart-content">
+                      <?php if(Session::get('autenticado')){ ?>
                       <div class="tt-cart-list">
                         
                       </div>
@@ -1216,6 +1217,13 @@
                           <a href="<?php echo BASE_URL ?>carrito" class="btn btn-border tt-hidden-desctope">VER CARROS COMPRAS</a>
                         </div>
                       </div>
+                      <?php }else{ ?>
+                        <div class="tt-cart-btn">
+                        <div class="tt-item">
+                          <a href="<?php echo BASE_URL ?>login/" class="btn">INICIAR SESION</a>
+                        </div>
+                      </div>
+                      <?php } ?>
                     </div>
                   </div>
                 </div>
