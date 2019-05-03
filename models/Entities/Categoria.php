@@ -33,6 +33,13 @@ function __construct() {}
     private $descripcion;
 
     /**
+     * @var string
+     *
+     * @Column(name="url", type="string", length=20, nullable=true)
+     */
+    private $url;
+
+    /**
      * @var boolean
      *
      * @Column(name="estado", type="boolean", nullable=true)
@@ -84,6 +91,29 @@ function __construct() {}
     public function getDescripcion()
     {
         return $this->descripcion;
+    }
+
+    /** 
+     * Set url
+     *
+     * @param string $url
+     * @return Categoria
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
+    
+        return $this;
+    }
+
+    /**
+     * Get url
+     *
+     * @return string 
+     */
+    public function getUrl()
+    {
+        return $this->url;
     }
 
     /** 

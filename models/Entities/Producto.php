@@ -49,7 +49,10 @@ function __construct() {}
     /**
      * @var integer
      *
-     * @Column(name="categoria", type="integer", nullable=true)
+     * @ManyToOne(targetEntity="Categoria")
+     * @JoinColumns({
+     *   @JoinColumn(name="categoria", referencedColumnName="id")
+     * })
      */
     private $categoria;
 

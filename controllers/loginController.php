@@ -10,6 +10,10 @@ class loginController extends Controller {
         if(Session::get('autenticado')){
             $this->redireccionar();
         }
+        $miga = array();
+        $miga['url'] = "login/";
+        $miga['nombre'] = ucwords(strtolower("INICIAR SESION"));
+        $this->_view->miga = array($miga);
         $this->_view->renderizar('index', 'login');
     }
 

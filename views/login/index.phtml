@@ -1,10 +1,12 @@
 <div class="tt-breadcrumb">
-	<div class="container">
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li>Register</li>
-		</ul>
-	</div>
+    <div class="container">
+        <ul>
+            <li><a href="<?php echo BASE_URL ?>">Inicio</a></li>
+            <?php foreach ($this->miga as $key => $value) { ?>
+                <li><a href="<?php echo BASE_URL.$value['url'] ?>"><?php echo $value['nombre'] ?></a></li>
+            <?php } ?>
+        </ul>
+    </div>
 </div>
 <div id="tt-pageContent">
 	<div class="container-indent">
