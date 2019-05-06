@@ -1,17 +1,17 @@
 <?php
 
 
-/* Date: 18/04/2019 17:43:43 */
+/* Date: 05/05/2019 21:51:42 */
 
 namespace Entities;
 
 /**
- * Tipotag
+ * Color
  *
- * @Table(name="categoria")
+ * @Table(name="color")
  * @Entity
  */
-class Categoria
+class Color
 {
 
 function __construct() {}
@@ -28,30 +28,23 @@ function __construct() {}
     /**
      * @var string
      *
-     * @Column(name="descripcion", type="string", length=100, nullable=true)
+     * @Column(name="descripcion", type="string", length=50, nullable=false)
      */
     private $descripcion;
 
     /**
      * @var string
      *
-     * @Column(name="url", type="string", length=20, nullable=true)
+     * @Column(name="rgb", type="string", length=10, nullable=false)
      */
-    private $url;
-
-    /**
-     * @var boolean
-     *
-     * @Column(name="estado", type="boolean", nullable=true)
-     */
-    private $estado;
+    private $rgb;
 
 
     /** 
      * Set id
      *
      * @param integer $id
-     * @return Categoria
+     * @return Color
      */
     public function setId($id)
     {
@@ -74,7 +67,7 @@ function __construct() {}
      * Set descripcion
      *
      * @param string $descripcion
-     * @return Categoria
+     * @return Color
      */
     public function setDescripcion($descripcion)
     {
@@ -94,48 +87,25 @@ function __construct() {}
     }
 
     /** 
-     * Set url
+     * Set rgb
      *
-     * @param string $url
-     * @return Categoria
+     * @param string $rgb
+     * @return Color
      */
-    public function setUrl($url)
+    public function setRgb($rgb)
     {
-        $this->url = $url;
+        $this->rgb = $rgb;
     
         return $this;
     }
 
     /**
-     * Get url
+     * Get rgb
      *
      * @return string 
      */
-    public function getUrl()
+    public function getRgb()
     {
-        return $this->url;
-    }
-
-    /** 
-     * Set estado
-     *
-     * @param boolean $estado
-     * @return Categoria
-     */
-    public function setEstado($estado)
-    {
-        $this->estado = $estado;
-    
-        return $this;
-    }
-
-    /**
-     * Get estado
-     *
-     * @return boolean 
-     */
-    public function getEstado()
-    {
-        return $this->estado;
+        return $this->rgb;
     }
 }

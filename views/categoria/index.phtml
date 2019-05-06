@@ -1,8 +1,10 @@
 <div class="tt-breadcrumb">
     <div class="container">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li>Listing</li>
+            <li><a href="<?php echo BASE_URL ?>">Inicio</a></li>
+            <?php foreach ($this->miga as $key => $value) { ?>
+                <li><a href="<?php echo BASE_URL.$value['url'] ?>"><?php echo $value['nombre'] ?></a></li>
+            <?php } ?>
         </ul>
     </div>
 </div>
@@ -49,7 +51,7 @@
                                     <?php if($value->getId() == $this->categoria->getId()){ ?>
                                         <?php $active = "active"; ?>
                                     <?php } ?>
-                                    <li class="<?php echo $active; ?>"><a href="<?php echo BASE_URL."categoria/detalle/".$value->getId() ?>"><?php echo $value->getDescripcion(); ?></a></li>
+                                    <li class="<?php echo $active; ?>"><a href="<?php echo BASE_URL."categoria/detalle/".$value->getUrl() ?>"><?php echo $value->getDescripcion(); ?></a></li>
                                     <?php $active = ""; ?>
                                 <?php } ?>
                             </ul>

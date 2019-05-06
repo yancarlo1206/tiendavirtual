@@ -107,7 +107,7 @@
   <nav class="panel-menu mobile-main-menu">
     <ul>
       <li>
-        <a href="<?php echo BASE_URL; ?>">HOME</a>
+        <a href="<?php echo BASE_URL; ?>">INICIO</a>
         <!-- <ul>
           <li>
             <a href="index.html">HOME STYLES</a>
@@ -549,7 +549,7 @@
               <nav>
                 <ul>
                   <li class="dropdown tt-megamenu-col-02 selected">
-                    <a href="<?php echo BASE_URL; ?>">HOME</a>
+                    <a href="<?php echo BASE_URL; ?>">INICIO</a>
                     <!-- <div class="dropdown-menu">
                       <div class="row tt-col-list">
                         <div class="col">

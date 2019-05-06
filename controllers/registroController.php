@@ -7,6 +7,10 @@ class registroController extends Controller {
     }
     
     public function index() {
+        $miga = array();
+        $miga['url'] = "registro/";
+        $miga['nombre'] = ucwords(strtolower("CREAR CUENTA"));
+        $this->_view->miga = array($miga);
         $this->_view->renderizar('index', 'registro');
     }
 

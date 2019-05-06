@@ -11,8 +11,11 @@ class productoController extends Controller {
 
     public function detalle($producto=null) {
         $this->_view->titulo = 'Producto Detalle';
-
         $this->_view->producto = $this->_producto->get($producto);
+        $miga = array();
+        $miga['url'] = "producto/".$producto;
+        $miga['nombre'] = ucwords(strtolower($this->_producto->getInstance()->getNombre()));
+        $this->_view->miga = array($miga);
         $this->_view->productoRelacionados = $this->_relacionado->findBy(array("producto" => $producto));
        
         $this->_view->renderizar('index', 'producto');
