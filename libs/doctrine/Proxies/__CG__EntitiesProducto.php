@@ -64,10 +64,10 @@ class Producto extends \Entities\Producto implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', 'id', 'referencia', 'nombre', 'descripcion', 'categoria', 'empresa', 'infoadicional', 'stock', 'precio', 'estado', 'marca', 'descuento');
+            return array('__isInitialized__', 'id', 'referencia', 'nombre', 'descripcion', 'categoria', 'empresa', 'infoadicional', 'stock', 'precio', 'estado', 'marca', 'descuento', 'tendencia', 'masVendido');
         }
 
-        return array('__isInitialized__', 'id', 'referencia', 'nombre', 'descripcion', 'categoria', 'empresa', 'infoadicional', 'stock', 'precio', 'estado', 'marca', 'descuento');
+        return array('__isInitialized__', 'id', 'referencia', 'nombre', 'descripcion', 'categoria', 'empresa', 'infoadicional', 'stock', 'precio', 'estado', 'marca', 'descuento', 'tendencia', 'masVendido');
     }
 
     /**
@@ -439,6 +439,50 @@ class Producto extends \Entities\Producto implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDescuento', array());
 
         return parent::getDescuento();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setTendencia($tendencia)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setTendencia', array($tendencia));
+
+        return parent::setTendencia($tendencia);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getTendencia()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getTendencia', array());
+
+        return parent::getTendencia();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setMasVendido($masVendido)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setMasVendido', array($masVendido));
+
+        return parent::setMasVendido($masVendido);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getMasVendido()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getMasVendido', array());
+
+        return parent::getMasVendido();
     }
 
 }
